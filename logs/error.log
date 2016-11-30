@@ -1,0 +1,131 @@
+[Mon Nov 28 09:54:18.071591 2016] [core:error] [pid 4430] [client 127.0.0.1:48778] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:18.071647 2016] [core:error] [pid 4430] [client 127.0.0.1:48778] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:19.176739 2016] [core:error] [pid 4430] [client 127.0.0.1:48778] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:19.176774 2016] [core:error] [pid 4430] [client 127.0.0.1:48778] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:19.185257 2016] [core:error] [pid 4429] [client 127.0.0.1:48780] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:19.185301 2016] [core:error] [pid 4429] [client 127.0.0.1:48780] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:19.394890 2016] [core:error] [pid 4432] [client 127.0.0.1:48782] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:19.394933 2016] [core:error] [pid 4432] [client 127.0.0.1:48782] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:19.396496 2016] [core:error] [pid 4431] [client 127.0.0.1:48784] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:19.396536 2016] [core:error] [pid 4431] [client 127.0.0.1:48784] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:23.906034 2016] [core:error] [pid 4440] [client 127.0.0.1:48788] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:23.906084 2016] [core:error] [pid 4440] [client 127.0.0.1:48788] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:24.040658 2016] [core:error] [pid 4440] [client 127.0.0.1:48788] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 09:54:24.040693 2016] [core:error] [pid 4440] [client 127.0.0.1:48788] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:19:28.647153 2016] [core:error] [pid 4794] [client 127.0.0.1:48844] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:19:28.647248 2016] [core:error] [pid 4794] [client 127.0.0.1:48844] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:06.900973 2016] [core:error] [pid 4796] [client 127.0.0.1:48912] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:06.926183 2016] [core:error] [pid 4796] [client 127.0.0.1:48912] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:07.672806 2016] [core:error] [pid 4796] [client 127.0.0.1:48912] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:07.672845 2016] [core:error] [pid 4796] [client 127.0.0.1:48912] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:08.177507 2016] [core:error] [pid 4796] [client 127.0.0.1:48912] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:08.177547 2016] [core:error] [pid 4796] [client 127.0.0.1:48912] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:08.194416 2016] [core:error] [pid 4792] [client 127.0.0.1:48914] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:08.194460 2016] [core:error] [pid 4792] [client 127.0.0.1:48914] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:13.266014 2016] [core:error] [pid 4796] [client 127.0.0.1:48912] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:13.266052 2016] [core:error] [pid 4796] [client 127.0.0.1:48912] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:13.720717 2016] [core:error] [pid 4794] [client 127.0.0.1:48918] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:13.720757 2016] [core:error] [pid 4794] [client 127.0.0.1:48918] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:13.875385 2016] [core:error] [pid 4796] [client 127.0.0.1:48912] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 10:50:13.875509 2016] [core:error] [pid 4796] [client 127.0.0.1:48912] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 11:27:04.513079 2016] [core:error] [pid 4795] [client 127.0.0.1:49126] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 11:27:04.513128 2016] [core:error] [pid 4795] [client 127.0.0.1:49126] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 11:27:06.137761 2016] [core:error] [pid 5052] [client 127.0.0.1:49130] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 11:27:06.137809 2016] [core:error] [pid 5052] [client 127.0.0.1:49130] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 15:36:40.032963 2016] [core:error] [pid 4792] [client 127.0.0.1:49230] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 15:36:40.060442 2016] [core:error] [pid 4792] [client 127.0.0.1:49230] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 17:40:18.495141 2016] [core:error] [pid 1634] [client 127.0.0.1:39680] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 17:40:18.613489 2016] [core:error] [pid 1634] [client 127.0.0.1:39680] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 17:40:20.392621 2016] [:error] [pid 1634] [client 127.0.0.1:39680] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 17:40:26.582287 2016] [core:error] [pid 1635] [client 127.0.0.1:39690] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 17:40:26.582333 2016] [core:error] [pid 1635] [client 127.0.0.1:39690] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 17:40:26.605501 2016] [:error] [pid 1635] [client 127.0.0.1:39690] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 17:40:34.825560 2016] [core:error] [pid 1632] [client 127.0.0.1:39698] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 17:40:34.825604 2016] [core:error] [pid 1632] [client 127.0.0.1:39698] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 17:40:34.849080 2016] [:error] [pid 1632] [client 127.0.0.1:39698] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 17:40:50.317775 2016] [core:error] [pid 1636] [client 127.0.0.1:39704] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 17:40:50.317818 2016] [core:error] [pid 1636] [client 127.0.0.1:39704] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 17:40:50.335604 2016] [:error] [pid 1636] [client 127.0.0.1:39704] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 20:18:34.286934 2016] [core:error] [pid 4051] [client 127.0.0.1:39738] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:18:34.286978 2016] [core:error] [pid 4051] [client 127.0.0.1:39738] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:18:34.304666 2016] [:error] [pid 4051] [client 127.0.0.1:39738] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 20:20:45.491024 2016] [core:error] [pid 4055] [client 127.0.0.1:39746] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:20:45.491071 2016] [core:error] [pid 4055] [client 127.0.0.1:39746] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:20:45.513432 2016] [:error] [pid 4055] [client 127.0.0.1:39746] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 20:22:06.243295 2016] [core:error] [pid 4054] [client 127.0.0.1:39748] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:22:06.243339 2016] [core:error] [pid 4054] [client 127.0.0.1:39748] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:22:06.264641 2016] [:error] [pid 4054] [client 127.0.0.1:39748] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 20:26:08.606390 2016] [core:error] [pid 1633] [client 127.0.0.1:39752] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:08.606695 2016] [core:error] [pid 1633] [client 127.0.0.1:39752] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:08.645124 2016] [:error] [pid 1633] [client 127.0.0.1:39752] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 20:26:15.140794 2016] [core:error] [pid 1634] [client 127.0.0.1:39758] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:15.140831 2016] [core:error] [pid 1634] [client 127.0.0.1:39758] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:15.151166 2016] [:error] [pid 1634] [client 127.0.0.1:39758] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 20:26:24.555570 2016] [core:error] [pid 1635] [client 127.0.0.1:39760] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:24.555611 2016] [core:error] [pid 1635] [client 127.0.0.1:39760] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:24.555654 2016] [core:error] [pid 1635] [client 127.0.0.1:39760] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:24.555661 2016] [core:error] [pid 1635] [client 127.0.0.1:39760] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:24.570394 2016] [:error] [pid 1635] [client 127.0.0.1:39760] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 20:26:37.374297 2016] [core:error] [pid 1632] [client 127.0.0.1:39762] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:37.374355 2016] [core:error] [pid 1632] [client 127.0.0.1:39762] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:37.380664 2016] [:error] [pid 1632] [client 127.0.0.1:39762] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 20:26:49.880610 2016] [core:error] [pid 1636] [client 127.0.0.1:39764] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:49.880645 2016] [core:error] [pid 1636] [client 127.0.0.1:39764] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:26:49.895551 2016] [:error] [pid 1636] [client 127.0.0.1:39764] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Mon Nov 28 20:27:13.969091 2016] [core:error] [pid 4051] [client 127.0.0.1:39766] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:27:13.969129 2016] [core:error] [pid 4051] [client 127.0.0.1:39766] AH00082: an unknown filter was not added: PHP
+[Mon Nov 28 20:27:13.979575 2016] [:error] [pid 4051] [client 127.0.0.1:39766] PHP Notice:  date_default_timezone_set(): Timezone ID 'UTC+4' is invalid in /home/master/sites/auction/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php on line 45
+[Tue Nov 29 11:31:21.932216 2016] [core:error] [pid 1580] [client 127.0.0.1:47464] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:21.932275 2016] [core:error] [pid 1580] [client 127.0.0.1:47464] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:23.713945 2016] [core:error] [pid 1580] [client 127.0.0.1:47464] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:23.713984 2016] [core:error] [pid 1580] [client 127.0.0.1:47464] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:23.717426 2016] [core:error] [pid 1579] [client 127.0.0.1:47466] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:23.717472 2016] [core:error] [pid 1579] [client 127.0.0.1:47466] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:24.028198 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:24.028252 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:24.133819 2016] [core:error] [pid 1582] [client 127.0.0.1:47470] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:24.133963 2016] [core:error] [pid 1582] [client 127.0.0.1:47470] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:29.759304 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:29.759344 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:29.942770 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:29.942799 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:30.584790 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:30.584830 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:35.549559 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:35.549597 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:37.667904 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:37.667970 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:38.070357 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Tue Nov 29 11:31:38.070397 2016] [core:error] [pid 1581] [client 127.0.0.1:47468] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:23.081414 2016] [core:error] [pid 1597] [client 127.0.0.1:51846] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:23.111692 2016] [core:error] [pid 1597] [client 127.0.0.1:51846] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:36.827513 2016] [core:error] [pid 1600] [client 127.0.0.1:51876] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:36.827559 2016] [core:error] [pid 1600] [client 127.0.0.1:51876] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:37.555433 2016] [core:error] [pid 4191] [client 127.0.0.1:51882] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:37.555482 2016] [core:error] [pid 4191] [client 127.0.0.1:51882] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:44.413521 2016] [core:error] [pid 1598] [client 127.0.0.1:51888] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:44.413571 2016] [core:error] [pid 1598] [client 127.0.0.1:51888] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:45.304477 2016] [core:error] [pid 1598] [client 127.0.0.1:51888] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:45.304517 2016] [core:error] [pid 1598] [client 127.0.0.1:51888] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:45.317752 2016] [core:error] [pid 1596] [client 127.0.0.1:51890] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:45.317799 2016] [core:error] [pid 1596] [client 127.0.0.1:51890] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:45.478582 2016] [core:error] [pid 1599] [client 127.0.0.1:51892] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:45.478632 2016] [core:error] [pid 1599] [client 127.0.0.1:51892] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:45.503158 2016] [core:error] [pid 4237] [client 127.0.0.1:51894] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:45.503425 2016] [core:error] [pid 4237] [client 127.0.0.1:51894] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:49.773082 2016] [core:error] [pid 4237] [client 127.0.0.1:51894] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:49.773128 2016] [core:error] [pid 4237] [client 127.0.0.1:51894] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:50.035733 2016] [core:error] [pid 4237] [client 127.0.0.1:51894] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:50.035777 2016] [core:error] [pid 4237] [client 127.0.0.1:51894] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:50.725814 2016] [core:error] [pid 4237] [client 127.0.0.1:51894] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 08:59:50.725843 2016] [core:error] [pid 4237] [client 127.0.0.1:51894] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 09:33:37.577270 2016] [core:error] [pid 4241] [client 127.0.0.1:51906] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 09:33:37.577357 2016] [core:error] [pid 4241] [client 127.0.0.1:51906] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 09:33:37.639518 2016] [core:error] [pid 4241] [client 127.0.0.1:51906] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 09:33:37.639548 2016] [core:error] [pid 4241] [client 127.0.0.1:51906] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 09:33:37.653111 2016] [core:error] [pid 1600] [client 127.0.0.1:51910] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 09:33:37.653209 2016] [core:error] [pid 1600] [client 127.0.0.1:51910] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 09:33:37.664740 2016] [core:error] [pid 1600] [client 127.0.0.1:51910] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 09:33:37.664853 2016] [core:error] [pid 1600] [client 127.0.0.1:51910] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 09:33:37.684901 2016] [core:error] [pid 1597] [client 127.0.0.1:51908] AH00082: an unknown filter was not added: PHP
+[Wed Nov 30 09:33:37.685036 2016] [core:error] [pid 1597] [client 127.0.0.1:51908] AH00082: an unknown filter was not added: PHP
