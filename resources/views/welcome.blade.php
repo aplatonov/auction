@@ -1,91 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@include('layouts.header')
 
-        <title>Laravel</title>
+<body>
+    <div class="color-bar-1"></div>
+    <div class="color-bar-2 color-bg"></div>
+    <div class="container">
+        @include('layouts.menu')
+        <div class="row"><!-- Begin Top Section -->
+            <!-- lots Preview
+            ================================================== -->
+		    <div class="span6">
+		        <h5 class="title-bg">Успейте участвовать! 
+		            <small> Лоты, по которым завершаются торги:</small>
+		            <button id="btn-blog-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
+		            <button id="btn-blog-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
+		        </h5>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+		        <div id="blogCarousel" class="carousel slide">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+		            <!-- Carousel items -->
+		            <div class="carousel-inner">
+		                <!-- Blog Item 1 -->
+		                <div class="active item">
+		                    <a href="{{ url('/') }}"><img src="img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+		                    <div class="post-info clearfix">
+		                        <h4><a href="{{ url('/') }}">Лот №1 Пипетка</a></h4>
+		                        <ul class="blog-details-preview">
+		                            <li><i class="icon-calendar"></i><strong>Окончание:</strong> <br>22.12.2016 в 14:00</li>
+		                            <li><i class="icon-user"></i><strong>Автор:</strong> <a href="{{ url('/') }}" title="Link">username</a></li>
+		                            <li><i class="icon-retweet"></i><strong>Ставок:</strong> 12</li>
+		                            <li><i class="icon-flag"></i><strong>Стартовая цена: </strong>1000</li>
+		                            <li><i class="icon-bell"></i><strong>Текущая цена: </strong>680</li>
+		                        </ul>
+		                    </div>
+		                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Подробнее...</a></p>
+		                </div>
 
-            .full-height {
-                height: 100vh;
-            }
+		                <!-- Blog Item 2-->
+		                <div class="item">
+		                    <a href="{{ url('/') }}"><img src="img/gallery/blog-med-img-1.jpg" alt="" class="align-left blog-thumb-preview" /></a>
+		                    <div class="post-info clearfix">
+		                        <h4><a href="{{ url('/') }}">Лот №2 Hektnr</a></h4>
+		                        <ul class="blog-details-preview">
+		                            <li><i class="icon-calendar"></i><strong>Окончание:</strong> <br>22.12.2016 в 14:00</li>
+		                            <li><i class="icon-user"></i><strong>Автор:</strong> <a href="{{ url('/') }}" title="Link">username</a></li>
+		                            <li><i class="icon-retweet"></i><strong>Ставок:</strong> 12</li>
+		                            <li><i class="icon-flag"></i><strong>Стартовая цена: </strong>1000</li>
+		                            <li><i class="icon-bell"></i><strong>Текущая цена: </strong>680</li>
+		                        </ul>
+		                    </div>
+		                    <p class="blog-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum felis fermentum ipsum molestie sed porttitor ligula rutrum. Vestibulum lectus tellus, aliquet et iaculis sed, volutpat vel erat. <a href="#">Подробнее...</a></p>
+		                </div>
+		            </div> <!-- Carousel inner -->
+		        </div>  
+		    </div>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
 
-            .position-ref {
-                position: relative;
-            }
+            <!-- articles Area
+            ================================================== -->
+		    <div class="span6">
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+		        <h5 class="title-bg">Об аукционе
+		            <small>Некоторые правила</small>
+		            <button id="btn-client-next" class="btn btn-inverse btn-mini" type="button">&raquo;</button>
+		            <button id="btn-client-prev" class="btn btn-inverse btn-mini" type="button">&laquo;</button>
+		        </h5>
 
-            .content {
-                text-align: center;
-            }
+		        <!-- Client Testimonial Slider-->
+		        <div id="clientCarousel" class="carousel slide no-margin">
+		            <!-- Carousel items -->
+		            <div class="carousel-inner">
 
-            .title {
-                font-size: 84px;
-            }
+		                <div class="active item">
+		                    <p class="quote-text">Незарегистрированные пользователи могут только просматривать лоты. Для того, чтобы размещать лоты и делать ставки необходимо зарегистрироваться<cite>правила участия в аукционе</cite></p>
+		                </div>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+		                <div class="item">
+		                    <p class="quote-text">Администратор имеет право заблокировать любого пользователя и лот, если он нарушает правила аукциона<cite>правила участия в аукционе</cite></p>
+		                </div>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
-                </div>
-            @endif
+		                <div class="item">
+		                    <p class="quote-text">Не рассуждай, не хлопочи!..<br>
+		                                          Безумство ищет, глупость судит;<br>
+		                                          Дневные раны сном лечи,<br>
+		                                          А завтра быть чему, то будет.<br>
+		                                          <br>
+		                                          Живя, умей все пережить:<br>
+		                                          Печаль, и радость, и тревогу.<br>
+		                                          Чего желать? О чем тужить?<br>
+		                                          День пережит — и слава богу!<cite>Федор Тютчев</cite></p>
+		                </div>
+		                
+		            </div>
+		        </div>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+		    </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+            
+        </div><!-- End Top Section -->
+
+        <!-- Gallery Items
+        ================================================== --> 
+
+    </div> <!-- End Container -->
+
+    <!-- Footer Area
+        ================================================== -->
+    @include('layouts.footer')
+
+    <!-- Scripts -->
+    <!--script src="/js/app.js"></script-->
+</body>
 </html>

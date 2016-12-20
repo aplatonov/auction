@@ -1,0 +1,1 @@
+Для подтверждения регистрации, пройдите по  <a href="site.ru/register/confirm/{{ $confirmation_code }}> ссылке</a>
