@@ -28,13 +28,16 @@
     <![endif]-->     
 
     <!-- Scripts -->
-    <script src="{{asset('http://code.jquery.com/jquery-1.8.3.min.js')}}"></script>
+    <script src="{{asset('js/jquery-1.8.3.min.js')}}"></script>
+    <!--script src="{{asset('http://code.jquery.com/jquery-1.8.3.min.js')}}"></script-->
     <!--script src="{{asset('http://code.jquery.com/jquery-1.12.4.min.js')}}"></script-->
     <script src="{{asset('js/bootstrap.js')}}"></script>
     <script src="{{asset('js/jquery.prettyPhoto.js')}}"></script>
     <script src="{{asset('js/jquery.flexslider.js')}}"></script>
     <script src="{{asset('js/jquery.custom.js')}}"></script>
     <script src="{{asset('js/jquery.simple-dtpicker.js')}}"></script>
+    <script src="{{asset('http://api-maps.yandex.ru/2.1/?lang=ru_RU')}}"></script>
+    <script src="{{asset('js/ymaps.js')}}"></script>
 
     <script>
         window.auction = <?php echo json_encode([

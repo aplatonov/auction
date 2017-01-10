@@ -6,6 +6,10 @@ use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Order;
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
+
 
 class RegisterController extends Controller
 {
@@ -64,13 +68,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $confirmation_code = str_random(32);
+
+        $data['link'] = '/register/confirm/' . $confirmation_code;
+
+        Mail::send('layouts.mailconfirm', $data, function ($message) use ($data) {
+                $message->to($data['email'])
+                    ->subject('Auction confirm registration ' . $data['username']);
+            });
+
         return User::create([
             'username' => $data['username'],
             'email' => $data['email'],
             'surname' => $data['surname'],
             'firstname' => $data['firstname'],
             'password' => bcrypt($data['password']),
-            'confirmation_code' => str_random(32),
+            'confirmation_code' => $confirmation_code,
         ]);
 
     }

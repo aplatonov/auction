@@ -126,6 +126,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Paginate Settings
+    |--------------------------------------------------------------------------
+    |
+    | Here you may set items count to output by page
+    |
+    */
+
+    'lots_on_page' => 4,
+
+    'lots_on_page_admin' => 15,
+
+    'users_on_page_admin' => 10,
+
+    /*
+    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -177,6 +192,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
 
     ],
 

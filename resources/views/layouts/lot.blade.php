@@ -31,6 +31,9 @@
                             items.push('id#' + val.id + ' ' + val.created_at +' <strong>' + val.bet_price + '</strong> от ' + val.username + '<br>');
                         });
                         $("#msg").html( (items.length == 0) ? 'Ставок не было' : items.join('') ).fadeIn();
+                        if (items.length > 0) {
+                            $('#winprice').html(response[0][0].bet_price).fadeIn();
+                        }
 
                         items = [];
                         $.each(response[1], function(key, val){
@@ -45,6 +48,35 @@
                 });
                 return false;
             });
+
+            $('.changePayStatus').submit(function(e){
+                e.preventDefault();
+                
+                var lot_id = $(this).find("input[name=lot_id]").val();
+                var pay_status_id = $(this).find("select[name=pay_status_id]").val();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/lots/paystatus/' + lot_id,
+                    cache: false,
+                    dataType: 'json',
+                    data: {lot_id: lot_id,
+                           pay_status_id: pay_status_id,
+                           '_token': "{{csrf_token()}}"
+                    },
+                    success: function (response) {
+                        if (response.text == 'success') {
+                            console.log("#pay_status_id"+lot_id+" "+pay_status_id);
+                        } else {
+                            console.log(response.text + ' Не удалось изменить статус оплаты.');
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log('oshibka payStatus');
+                    }
+                });
+                return false;
+            });                 
         });
 
         function getBets() {
@@ -68,13 +100,15 @@
                             items.push('id#' + val.id + ' ' + val.created_at +' <strong>' + val.bet_price + '</strong> от ' + val.username + '<br>');
                         });
                         $("#msg").html( (items.length == 0) ? 'Ставок не было' : items.join('') ).fadeIn();
+                        if (items.length > 0) {
+                            $('#winprice').html(response[0][0].bet_price).fadeIn();
+                        }
 
                         items = [];
                         $.each(response[1], function(key, val){
                             items.push('id#' + val.id + ' ' + val.created_at +' <strong>' + val.bet_price + '</strong>' + '<br>');
                         });
                         $("#msg-user").html( (items.length == 0) ? 'Ставок не было' : items.join('') ).fadeIn();
-
 
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
@@ -113,15 +147,36 @@
                         <p>{{ $lot->description }}</p>
 
                         <ul class="project-info">
-                            <li><h6>Категория: </h6>{{ $lot->category_id }}</li>
-                            <li><h6>Стартовая цена: </h6>{{ $lot->start_price }}</li>
-                            <li><h6>Разместивший пользователь: </h6>{{ $lot->owner_id }}</li>
-                            <li><h6>Начало аукциона: </h6>{{ $lot->begin_auction }}</li>
-                            <li><h6>Окончание аукциона: </h6>{{ $lot->end_auction }}</li>
-                            <li><h6>Блокировка: </h6>{{ $lot->disabled }} {{ $lot->disabled_date }} {{ $lot->disabled_reason_id }}</li>
-                            <li><h6>Окончательная цена: </h6>{{ $lot->final_price }}</li>
-                            <li><h6>Покупатель: </h6>{{ $lot->winner_id }}</li>
-                            <li><h6>Статус оплаты: </h6>{{ $lot->pay_status_id }}</li>
+                            <li><h6>Категория: </h6><strong>{{ $category }}</strong></li>
+                            <li><h6>Стартовая цена: </h6><strong>{{ $lot->start_price }}</strong></li>
+                            <li><h6>Разместивший пользователь: </h6><strong>{{ $owner }}</strong></li>
+                            <li><h6>Начало аукциона: </h6><strong>{{ $lot->begin_auction }}</strong></li>
+                            <li><h6>Окончание аукциона: </h6><strong>{{ $lot->end_auction }}</strong></li>
+                            <li><h6>Блокировка: </h6><strong>{{ $disable }}</strong></li>
+                            <li><h6>Окончательная <small>(побеждающая)</small> цена: </h6><strong><span id="winprice">{{ $final_price }}</span></strong></li>
+                            <li><h6>Покупатель: </h6><strong>{{ $winner }}</strong></li>
+                            <li><h6>Статус оплаты: </h6><strong>
+                                @if (Auth::id() == $lot->owner_id && $lot->disable_reason_id == 3)
+                                    <form class="changePayStatus" > 
+                                        <br>
+                                        <select id="pay_status_id" name="pay_status_id" class="form-control pull-left">
+                                            @foreach($pay_status_arr as $pay_status)
+                                                @if ($lot->pay_status_id == $pay_status->id)
+                                                    <option selected value="{{$pay_status->id}}">{{$pay_status->pay_descr}}</option>
+                                                @else
+                                                    <option value="{{$pay_status->id}}">{{$pay_status->pay_descr}}</option>
+                                                @endif
+                                            @endforeach
+                                        </select>
+                                        <input type="hidden" name="_token"  id="_token" value="{{csrf_token()}}"/>
+                                        <input type="hidden" name="lot_id" id="lot_id" value="{{ $lot->id }}"/>
+                                        <input class="btn btn-small pull-right" type="submit" name="action" value="Применить">
+                                        <br>
+                                    </form>                                    
+                                @elseif (Auth::check())
+                                    {{ $pay_status }}
+                                @endif
+                            </strong></li>
                         </ul>
 
                         @if (Auth::id() == $lot->owner_id )

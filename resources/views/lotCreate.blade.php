@@ -44,7 +44,7 @@
                                 <label for="category_id" class="col-md-4 control-label">Категория лота</label>
                                 <div class="col-md-4">
                                     <select id="category_id" name="category_id" class="form-control" name="category_id">
-                                        @foreach($categories as $category)
+                                        @foreach($allCategories as $category)
                                             @if ($loop->first)
                                             <option selected value="{{$category->id}}">{{$category->name_cat}}</option>
                                             @else

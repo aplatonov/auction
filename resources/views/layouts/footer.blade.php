@@ -3,7 +3,7 @@
             <div class="row footer-row">
                 <div class="span2 footer-col">
                     <h5>О проекте</h5>
-                   <img src="img/auction-footer-logo.png" alt="Auction logo" /><br /><br />
+                   <img src="/img/auction-footer-logo.png" alt="Auction logo" /><br /><br />
                     <address>
                         <strong>Итоговое задание</strong><br />
                         курс "Продвинутый PHP"<br />
@@ -26,10 +26,10 @@
                 <div class="span1 footer-col">
                 </div>            
                 <div class="span3 footer-col">
-                    @yield('lastlots')
+                    @include('blocks.lastlots')
                 </div>
                 <div class="span3 footer-col">
-                    @yield('lotspics')
+                    @include('blocks.lotspics')
                 </div>
             </div>
 
@@ -40,8 +40,8 @@
                         <div class="span6">
                             <span class="right">
                             <a href="{{asset('/')}}">Главная</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                            <a href="{{asset('/')}}">Лоты</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-                            <a href="{{asset('/')}}">Горячие предложения</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                            <a href="{{asset('/home')}}">Действующие лоты</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                            <a href="{{asset('/blockedlots')}}">Разыгранные лоты</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
                             <a href="{{asset('/contacts')}}">Контакты</a>
                             </span>
                         </div>

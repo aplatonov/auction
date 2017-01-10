@@ -16,7 +16,7 @@
                                 <label for="lot_name" class="col-md-4 control-label">Название лота</label>
 
                                 <div class="col-md-4">
-                                    <input id="lot_name" type="text" class="form-control" name="lot_name" value="{{ $lot->lot_name }}" required autofocus>
+                                    <input id="lot_name" type="text" class="form-control" name="lot_name" value="{{ $lot->lot_name }}" required autofocus {{ $readonly }}>
 
                                     @if ($errors->has('lot_name'))
                                         <span class="help-block">
@@ -44,7 +44,7 @@
                                 <label for="category_id" class="col-md-4 control-label">Категория лота</label>
                                 <div class="col-md-4">
                                     <select id="category_id" name="category_id" class="form-control">
-                                        @foreach($categories as $category)
+                                        @foreach($allCategories as $category)
                                             @if ($lot->category_id == $category->id)
                                                 <option selected value="{{$category->id}}">{{$category->name_cat}}</option>
                                             @else
@@ -59,7 +59,7 @@
                                 <label for="start_price" class="col-md-4 control-label">Стартовая цена</label>
 
                                 <div class="col-md-4">
-                                    <input id="start_price" type="text" class="form-control" name="start_price" value="{{ $lot->start_price }}" required autofocus>
+                                    <input id="start_price" type="text" class="form-control" name="start_price" value="{{ $lot->start_price }}" required autofocus {{ $readonly }}>
 
                                     @if ($errors->has('start_price'))
                                         <span class="help-block">

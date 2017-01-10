@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Response;
 use Carbon\Carbon;
+use App\Order;
+use App\Mail\OrderShipped;
+use App\Http\Requests\FeedbackRequest;
+use Illuminate\Support\Facades\Mail;
 
 class BetController extends Controller
 {
@@ -66,9 +70,9 @@ class BetController extends Controller
     {
         if (is_numeric($request->input('bet_price'))) {
             $was_same_bet = Bets::where('lot_id', $request->input('lot_id'))
-                                    ->where('user_id', $request->input('user_id'))
-                                    ->where('bet_price', $request->input('bet_price'))
-                                    ->count();
+                ->where('user_id', $request->input('user_id'))
+                ->where('bet_price', $request->input('bet_price'))
+                ->count();
             if ($was_same_bet == 0 && Lots::find($request->input('lot_id'))->end_auction>=Carbon::now() && Lots::find($request->input('lot_id'))->disabled == 0) {
                 $bet = new Bets;
                 $bet->lot_id = $request->input('lot_id');
@@ -79,13 +83,13 @@ class BetController extends Controller
         }
         
         /*
-          завершаем аукцион по данному лоту, 
-          объявляем победителя (id в базу, письма победтелю и хозяину),
-          пишем окончат. цену,
-          блокируем лот
-          пишем причину блокировки: 3-определен победитель (была хотя бы одна ставка)
-                                    4-истекло время (ставок не было)
-          в таблице ставок помечаем победившую ставку
+         * завершаем аукцион по данному лоту, 
+         * объявляем победителя (id в базу, письма победтелю и хозяину),
+         * пишем окончат. цену,
+         * блокируем лот
+         * пишем причину блокировки: 3-определен победитель (была хотя бы одна ставка)
+         *                           4-истекло время (ставок не было)
+         * в таблице ставок помечаем победившую ставку
         */
 
         if (Lots::find($request->input('lot_id'))->disabled == 0 && Lots::find($request->input('lot_id'))->end_auction<=Carbon::now()) {
@@ -93,11 +97,12 @@ class BetController extends Controller
             $lot->disabled = 1; 
             $lot->disabled_date = Carbon::now();
 
-            //побеждает ставка с самой большой ценой, сделанная раньше всех
+            /* побеждает ставка с самой большой ценой, сделанная раньше всех */
             $best_bet = Bets::where('lot_id', $request->input('lot_id'))
-                                ->orderBy('bet_price', 'desc')
-                                ->orderBy('created_at', 'asc')
-                                ->first();
+                ->orderBy('bet_price', 'desc')
+                ->orderBy('created_at', 'asc')
+                ->first();
+
             if($best_bet) {
                 $lot->final_price = $best_bet->bet_price;
                 $lot->disable_reason_id = 3;
@@ -108,29 +113,51 @@ class BetController extends Controller
                 $lot->disable_reason_id = 4;
             }
 
+            $data['link'] = '/lots/'.$lot->id;
+            if (isset($lot->winner->username)) {
+                $data['winner_name'] = $lot->winner->username;
+                $data['winner_email'] = $lot->winner->email;
+            } else {
+                $data['winner_name'] = 'победитель отсутствует';
+                $data['winner_email'] = 'admin@auction.ru';
+            }
+            $data['owner_name'] = $lot->users->username;
+            $data['owner_email'] =  $lot->users->email;
+            $data['lot_name'] = $lot->lot_name;
+            $data['final_price'] = $lot->final_price;
+            $data['finish_date'] = Carbon::now();
+            //dd($data);
             $lot->save();
+
+            Mail::send('layouts.finishlot', $data, function ($message) use ($data) {
+                $message->to($data['owner_email'], $data['owner_name'])
+                    ->cc($data['winner_email'], $data['winner_name'])
+                    ->bcc('admin@auction.ru')
+                    ->subject('Окончание торга по лоту ' . $data['lot_name'])
+                    ->replyTo('admin@auction.ru');
+            });
         }   
 
         $last_five_bets = DB::table('bets')
-                            ->join('users', 'bets.user_id', '=', 'users.id')
-                            ->select('bets.*', 'users.username')
-                            ->where('lot_id', $request->input('lot_id'))
-                            ->orderBy('bet_price', 'desc')
-                            ->orderBy('created_at', 'asc')
-                            ->take(5)
-                            ->get()
-                            ->toArray();
+            ->join('users', 'bets.user_id', '=', 'users.id')
+            ->select('bets.*', 'users.username')
+            ->where('lot_id', $request->input('lot_id'))
+            ->orderBy('bet_price', 'desc')
+            ->orderBy('created_at', 'asc')
+            ->take(5)
+            ->get()
+            ->toArray();
         
        $last_user_bets = DB::table('bets')
-                            ->join('users', 'bets.user_id', '=', 'users.id')
-                            ->select('bets.*', 'users.username')
-                            ->where('lot_id', $request->input('lot_id'))
-                            ->where('user_id', $request->input('user_id'))
-                            ->orderBy('bet_price', 'desc')
-                            ->orderBy('created_at', 'desc')
-                            ->take(5)
-                            ->get()
-                            ->toArray();
+            ->join('users', 'bets.user_id', '=', 'users.id')
+            ->select('bets.*', 'users.username')
+            ->where('lot_id', $request->input('lot_id'))
+            ->where('user_id', $request->input('user_id'))
+            ->orderBy('bet_price', 'desc')
+            ->orderBy('created_at', 'desc')
+            ->take(5)
+            ->get()
+            ->toArray();
 
         return Response::json([$last_five_bets, $last_user_bets]);
     }
