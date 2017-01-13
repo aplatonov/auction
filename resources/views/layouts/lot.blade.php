@@ -135,9 +135,13 @@
                         <h6 class="title-bg">Лот #{{ $lot->id }}: <small>{{ $lot->lot_name }}</small></h6>
                         <div class="flexslider">
                           <ul class="slides">
-                            @foreach ($lot->images as $images)
-                                 <li><a href="../img/gallery/{{ $lot->id }}/{{ $images }}" class="lightbox" data-rel="prettyPhoto" rel="prettyPhoto" title="{{ $lot->lot_name }}"><img src="../img/gallery/{{ $lot->id }}/{{ $images }}" alt="{{ $images }}" class="align-left blog-thumb-preview" /></a></li>
-                            @endforeach
+                                  @foreach ($lot->images as $images)
+                                       @if ( $images != '' ) 
+                                            <li><a href="../img/gallery/{{ $lot->id }}/{{ $images }}" class="lightbox" data-rel="prettyPhoto" rel="prettyPhoto" title="{{ $lot->lot_name }}"><img src="../img/gallery/{{ $lot->id }}/{{ $images }}" alt="{{ $images }}" class="align-left blog-thumb-preview" /></a></li>
+                                       @else
+                                            <li><a href="../img/noimage.png" class="lightbox" data-rel="prettyPhoto" rel="prettyPhoto" title="{{ $lot->lot_name }}"><img src="../img/noimage.png" alt="no image" class="align-left blog-thumb-preview" /></a></li>
+                                       @endif 
+                                  @endforeach
                           </ul>
                         </div>
                     </div>
@@ -196,15 +200,17 @@
                             </div>
                         @elseif (Auth::check())
                             <div class="span2">
-                                <form class="form-search" id="betForm"> 
-                                    <div class="input-prepend">
-                                        <input class="btn btn-inverse" type="submit" value="Моя ставка">
-                                        <input class="span1 search-query" type="text" name="bet_price" id="bet_price" onkeyup="this.value = this.value.replace (/\D/g, '')"/>
-                                    </div>
-                                    <input type="hidden" name="_token"  id="_token" value="{{csrf_token()}}"/>
-                                    <input type="hidden" name="user_id" id="user_id" value="{{ Auth::id() }}"/>
-                                    <input type="hidden" name="lot_id" id="lot_id" value="{{ $lot->id }}"/>
-                                 </form>
+                                    <form class="form-search" id="betForm">
+                                    @if ($lot->disable_reason_id == 0) 
+                                        <div class="input-prepend">
+                                            <input class="btn btn-inverse" type="submit" value="Моя ставка">
+                                            <input class="span1 search-query" type="text" name="bet_price" id="bet_price" onkeyup="this.value = this.value.replace (/\D/g, '')"/>
+                                        </div>
+                                    @endif
+                                        <input type="hidden" name="_token"  id="_token" value="{{csrf_token()}}"/>
+                                        <input type="hidden" name="user_id" id="user_id" value="{{ Auth::id() }}"/>
+                                        <input type="hidden" name="lot_id" id="lot_id" value="{{ $lot->id }}"/>
+                                     </form>
                                  <h6>Ваши ставки</h6>
                                  <p class="well well-small" id="msg-user"><img src="/img/ajax-loader.gif" alt="Загрузка..." /><br></p>
                              </div>

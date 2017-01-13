@@ -19,7 +19,7 @@
                     @else
                         <div class="item">
                     @endif
-                        <a href="/lots/{{ $top_lot['id'] }}"><img src="/img/gallery/{{ $top_lot['id'] }}/{{ $top_lot['images'] }}" alt="{{ $top_lot['lot_name'] }}" class="align-left blog-thumb-preview-img" /></a>
+                        <a href="/lots/{{ $top_lot['id'] }}"><img src="{{ $top_lot['images'] != '' ? '/img/gallery/' . $top_lot['id'] . '/' . $top_lot['images'] : '/img/noimage.png' }}" alt="{{ $top_lot['lot_name'] }}" class="align-left blog-thumb-preview-img" /></a>
                         <div class="post-info clearfix">
                             <h4><small><a href="/lots/{{ $top_lot['id'] }}">{{ $top_lot['lot_name'] }}</a></small></h4>
                             <ul class="blog-details-preview">

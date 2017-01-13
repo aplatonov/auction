@@ -59,7 +59,7 @@
                                 <label for="start_price" class="col-md-4 control-label">Стартовая цена</label>
 
                                 <div class="col-md-4">
-                                    <input id="start_price" type="text" class="form-control" name="start_price" value="{{ $lot->start_price }}" required autofocus {{ $readonly }}>
+                                    <input id="start_price" type="text" class="form-control" name="start_price" value="{{ $lot->start_price }}" onkeyup="this.value = this.value.replace (/\D/g, '')" required autofocus {{ $readonly }}>
 
                                     @if ($errors->has('start_price'))
                                         <span class="help-block">

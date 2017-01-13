@@ -66,6 +66,17 @@ class LotController extends Controller
 
         $form = $request->all();
 
+        if (isset($form['disabled'])) {
+            $form['disabled'] = '1';
+            $form['disable_reason_id'] = 6;
+            $form['disabled_date'] = Carbon::now();            
+        }
+        else {
+            $form['disabled'] = '0';
+            $form['disable_reason_id'] = null;
+            $form['disabled_date'] = null;
+        }
+        
         if(!empty($form['images'])) {
             $f_names = $form['images'];
 
@@ -73,17 +84,6 @@ class LotController extends Controller
                 $new_files[$file->getRealPath()] = str_random(8) . '.' . $file->getClientOriginalExtension();
             }
             $form['images'] = implode(';', $new_files);
-
-            if (isset($form['disabled'])) {
-                $form['disabled'] = '1';
-                $form['disable_reason_id'] = 6;
-                $form['disabled_date'] = Carbon::now();            
-            }
-            else {
-                $form['disabled'] = '0';
-                $form['disable_reason_id'] = null;
-                $form['disabled_date'] = null;
-            }
 
             $lot = Lots::create($form);
             if ($lot) {

@@ -104,6 +104,8 @@
     @include('layouts.footer')
 
     <!-- Scripts -->
+    <script src="{{asset('http://api-maps.yandex.ru/2.1/?lang=ru_RU')}}"></script>
+    <script src="{{asset('js/ymaps.js')}}"></script>
 
 </body>
 </html>

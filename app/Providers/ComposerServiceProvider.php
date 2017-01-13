@@ -54,7 +54,9 @@ class ComposerServiceProvider extends ServiceProvider
             foreach ($all_lots as $value) {
                 $tmp_arr = explode(';', $value['images']);
                 foreach ($tmp_arr as $tmp_val) {
-                    $images[] = ['pic' => '/img/gallery/' . $value['id'] . '/' . $tmp_val, 'lot_id' => $value['id']];
+                    if ($tmp_val) {
+                        $images[] = ['pic' => '/img/gallery/' . $value['id'] . '/' . $tmp_val, 'lot_id' => $value['id']];
+                    }
                 }
             };
             shuffle($images);

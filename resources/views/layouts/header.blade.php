@@ -36,8 +36,8 @@
     <script src="{{asset('js/jquery.flexslider.js')}}"></script>
     <script src="{{asset('js/jquery.custom.js')}}"></script>
     <script src="{{asset('js/jquery.simple-dtpicker.js')}}"></script>
-    <script src="{{asset('http://api-maps.yandex.ru/2.1/?lang=ru_RU')}}"></script>
-    <script src="{{asset('js/ymaps.js')}}"></script>
+    <!--script src="{{asset('http://api-maps.yandex.ru/2.1/?lang=ru_RU')}}"></script-->
+    <!--script src="{{asset('js/ymaps.js')}}"></script-->
 
     <script>
         window.auction = <?php echo json_encode([
