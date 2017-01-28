@@ -47,6 +47,7 @@ class ComposerServiceProvider extends ServiceProvider
                 }
                 $value['best_bet'] = $final_price;
             }  
+            unset($value);
             
             $all_lots = Lots::where('disabled', 0)
                 ->get()
